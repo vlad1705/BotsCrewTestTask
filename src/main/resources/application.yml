@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/university
+    username: postgres
+    password: password
+
+#  spring:
+#    shell:
+#      interactive:
+#        enabled: false
+#    datasource:
+#      url: ${SPRING_DATASOURCE_URL}
+#      username: ${SPRING_DATASOURCE_USERNAME}
+#      password: ${SPRING_DATASOURCE_PASSWORD}
