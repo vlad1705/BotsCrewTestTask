@@ -17,6 +17,6 @@ public class Controller {
 
     @GetMapping
     public String returnSomething(@RequestParam String name){
-        return departmentRepository.findByName(name).getHeadOfDepartment();
+        return departmentRepository.findByName(name).orElseThrow().getHeadOfDepartment();
     }
 }

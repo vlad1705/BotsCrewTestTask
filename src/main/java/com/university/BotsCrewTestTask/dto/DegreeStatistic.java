@@ -1,10 +1,8 @@
 package com.university.BotsCrewTestTask.dto;
 
 import lombok.Data;
-import lombok.Getter;
 
 @Data
-@Getter
 public class DegreeStatistic {
     private String degree;
     private Long count;

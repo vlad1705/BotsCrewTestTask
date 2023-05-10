@@ -1,20 +1,16 @@
 package com.university.BotsCrewTestTask.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "department")
-@Data
 @ToString
-@AllArgsConstructor
-@Builder
+@NoArgsConstructor
+@Getter
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,13 +19,9 @@ public class Department {
     @Column
     private String name;
 
-    @Column
+    @Column(name = "head_of_department")
     private String headOfDepartment;
 
-    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "departments")
     private List<Lector> lectors = new ArrayList<>();
-
-    public Department() {
-
-    }
 }
